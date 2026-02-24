@@ -1,0 +1,22 @@
+// Program to demonstrate Pass by Value
+#include <iostream>
+using namespace std;
+
+// function decleration 
+void multiplyByTwo ( int num )
+{
+	num = num * 2;
+	cout << "Inside function, number = " << num << endl;
+}
+
+int main ()
+{
+	int number = 10;
+	cout << "Before calling function, number = " << number << endl;
+	
+	multiplyByTwo( number );
+	
+	cout << "After calling function, number = " << number << endl;
+	
+	return 0;	
+}
