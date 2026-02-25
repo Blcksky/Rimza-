@@ -1,0 +1,45 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string correctUsername = "Rimza";
+    string correctPassword = "12345";
+    
+    string username, password;
+    int attempts = 3;
+
+    cout << "---- Login System ----" << endl;
+
+    while (attempts > 0)
+    {
+        cout << "\nEnter Username: ";
+        cin >> username;
+
+        cout << "Enter Password: ";
+        cin >> password;
+
+        if (username == correctUsername && password == correctPassword)
+        {
+            cout << "\nLogin Successful! Welcome " << username <<   endl;
+            break;
+        }
+        else
+        {
+            attempts--;
+            cout << "\nInvalid Username or Password!" << endl;
+
+            if (attempts > 0)
+            {
+                cout << "Attempts remaining: " << attempts << endl;
+            }
+            else
+            {
+                cout << "\nAccount Locked! Too many failed attempts." << endl;
+            }
+        }
+    }
+
+    return 0;
+}
